@@ -4,8 +4,10 @@ import pandas as pd
 import pickle
 import seaborn as sns
 import matplotlib.pyplot as plt
+import os
 
-with open("logistic_regression_model.pkl", "rb") as file:
+model_path = os.path.join(os.path.dirname(__file__), "logistic_regression_model.pkl")
+with open(model_path, "rb") as file:
     model = pickle.load(file)
 # Data description
 st.title("Breast Cancer Prediction Dashboard")
