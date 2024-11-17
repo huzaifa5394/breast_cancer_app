@@ -13,7 +13,7 @@ from sklearn.model_selection import GridSearchCV
 #model_path = os.path.join(os.path.dirname(__file__), "logistic_regression_model.pkl")
 #with open(model_path, "rb") as file:
     #model = pickle.load(file)
-Breast_Cancer_data=pd.read_csv("C:\Users\ROSHAN\Desktop\breast cancer project\my_app\brest_can_app\data.csv")
+Breast_Cancer_data=pd.read_csv("C:/Users/ROSHAN/Desktop/breast cancer project/my_app/brest_can_app/data.csv")
 Breast_Cancer_data["diagnosis"]=Breast_Cancer_data["diagnosis"].apply(lambda x: 1 if x=="M" else 0 )
 feature=Breast_Cancer_data.drop("diagnosis",axis=1).to_numpy()
 target=Breast_Cancer_data["diagnosis"].to_numpy()
